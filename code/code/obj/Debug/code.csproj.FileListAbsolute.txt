@@ -16,5 +16,5 @@ C:\code\ReportGenerator\code\code\obj\Debug\code.csproj.CoreCompileInputs.cache
 C:\code\ReportGenerator\code\code\obj\Debug\code.csproj.CopyComplete
 C:\code\ReportGenerator\code\code\obj\Debug\code.dll
 C:\code\ReportGenerator\code\code\obj\Debug\code.pdb
-C:\code\ReportGenerator\code\code\obj\Debug\code.csprojAssemblyReference.cache
 C:\code\ReportGenerator\code\code\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\code\ReportGenerator\code\code\obj\Debug\code.csprojAssemblyReference.cache

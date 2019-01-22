@@ -25,7 +25,7 @@ namespace code.ViewModel
         }
     }
 
-    class DataTemplet
+    public class DataTemplet
     {
         public DataTempletItem Root { get; set; }
 
