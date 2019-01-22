@@ -173,6 +173,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\DataTempletViewModel.cs" />
+    <Compile Include="ViewModel\DocumentViewModel.cs" />
     <Compile Include="View\WindowsForm\DataSidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

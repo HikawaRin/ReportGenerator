@@ -10,13 +10,14 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="0" Width="300"
+        <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="0"
                       VerticalScrollBarVisibility="Hidden"
                       PreviewMouseWheel="DataTempletScrollViewer_PreviewMouseWheel">
-            <TreeView x:Name="DataTempletTree" Width="300">
+            <TreeView x:Name="DataTempletTree">
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
                         <StackPanel Orientation="Horizontal">
@@ -30,5 +31,8 @@
                 </TreeView.ItemTemplate>
             </TreeView>
         </ScrollViewer>
+        <Grid Grid.Row="1">
+            <Button x:Name="InsertButton" Click="InsertButton_Click">Insert</Button>
+        </Grid>
     </Grid>
 </UserControl>

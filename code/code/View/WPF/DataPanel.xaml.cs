@@ -23,10 +23,13 @@ namespace code.View.WPF
     {
         public DataTempletViewModel DataTempletViewModel { get; set; }
 
+        public DocumentViewModel DocumentViewModel { get; set; }
+
         public DataPanel()
         {
             InitializeComponent();
             DataTempletViewModel = new DataTempletViewModel();
+            DocumentViewModel = new DocumentViewModel();
 
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
         }
@@ -39,6 +42,12 @@ namespace code.View.WPF
                 Source = sender
             };
             DataTempletScrollViewer.RaiseEvent(eventArg);
+        }
+
+        private void InsertButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
+            DocumentViewModel.InsertBookMark(item.Name);
         }
     }
 }
