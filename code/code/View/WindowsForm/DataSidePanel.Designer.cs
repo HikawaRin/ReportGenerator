@@ -45,9 +45,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.elementHost1);
             this.Name = "DataSidePanel";
-            this.Size = new System.Drawing.Size(300, 900);
+            this.Size = new System.Drawing.Size(303, 903);
             this.ResumeLayout(false);
 
         }

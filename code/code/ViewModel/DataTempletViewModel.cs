@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using code.Model;
 
 namespace code.ViewModel
 {
@@ -25,13 +26,21 @@ namespace code.ViewModel
         }
     }
 
-    public class DataTemplet
+    public class DataTempletViewModel
     {
-        public DataTempletItem Root { get; set; }
+        public List<DataTempletItem> Root { get; set; }
 
-        public DataTemplet()
+        public IDataTempletModel DataTempletModel { get; set; }
+
+        public DataTempletViewModel()
         {
-            Root = new DataTempletItem();
+            Root = new List<DataTempletItem>
+            {
+                new DataTempletItem()
+            };
+            DataTempletModel = new DataTempletModel(@"C:\code\ReportGenerator\code\code\Data\DataTempletDemo.xml");
+
+            DataTempletModel.GenerateDataTempletTree(Root[0]);
         }
     }
 }

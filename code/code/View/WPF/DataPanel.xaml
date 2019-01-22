@@ -13,12 +13,19 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="DataTempletScrollViewer" VerticalScrollBarVisibility="Hidden"
+        <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="0" Width="300"
+                      VerticalScrollBarVisibility="Hidden"
                       PreviewMouseWheel="DataTempletScrollViewer_PreviewMouseWheel">
-            <TreeView x:Name="DataTempletTree">
+            <TreeView x:Name="DataTempletTree" Width="300">
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
-                        <TextBlock VerticalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
+                            <StackPanel.ToolTip>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Path}" 
+                                           TextWrapping="Wrap" MaxWidth="150"/>
+                            </StackPanel.ToolTip>
+                        </StackPanel>
                     </HierarchicalDataTemplate>
                 </TreeView.ItemTemplate>
             </TreeView>

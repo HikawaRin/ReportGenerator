@@ -172,7 +172,7 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModel\DataTemplet.cs" />
+    <Compile Include="ViewModel\DataTempletViewModel.cs" />
     <Compile Include="View\WindowsForm\DataSidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

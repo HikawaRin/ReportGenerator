@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using code.ViewModel;
 
 namespace code.View.WPF
 {
@@ -20,9 +21,14 @@ namespace code.View.WPF
     /// </summary>
     public partial class DataPanel : UserControl
     {
+        public DataTempletViewModel DataTempletViewModel { get; set; }
+
         public DataPanel()
         {
             InitializeComponent();
+            DataTempletViewModel = new DataTempletViewModel();
+
+            this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
         }
 
         private void DataTempletScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
