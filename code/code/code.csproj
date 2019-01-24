@@ -169,6 +169,7 @@
       <DependentUpon>MainRibbon.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DataTempletModel.cs" />
+    <Compile Include="Model\DocumentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
