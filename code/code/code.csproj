@@ -162,12 +162,14 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Data\MockData.cs" />
     <Compile Include="MainRibbon.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MainRibbon.Designer.cs">
       <DependentUpon>MainRibbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DataModel.cs" />
     <Compile Include="Model\DataTempletModel.cs" />
     <Compile Include="Model\DocumentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

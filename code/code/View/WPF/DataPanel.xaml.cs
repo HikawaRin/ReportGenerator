@@ -48,6 +48,7 @@ namespace code.View.WPF
         {
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
             DocumentViewModel.InsertBookMark(item.Name);
+            DocumentViewModel.InsertListData(item.Name, item.Path);
         }
     }
 }

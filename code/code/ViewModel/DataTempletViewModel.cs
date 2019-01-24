@@ -7,6 +7,12 @@ using code.Model;
 
 namespace code.ViewModel
 {
+    public interface IGenerateDataTempletTreeAble
+    {
+        //根据实际数据模型建立数据模板树
+        void GenerateDataTempletTree(DataTempletItem root);
+    }
+
     public class DataTempletItem
     {
         public string Name { get; set; }
@@ -30,7 +36,7 @@ namespace code.ViewModel
     {
         public List<DataTempletItem> Root { get; set; }
 
-        public IDataTempletModel DataTempletModel { get; set; }
+        public IGenerateDataTempletTreeAble DataTempletModel { get; set; }
 
         public DataTempletViewModel()
         {

@@ -8,13 +8,7 @@ using code.ViewModel;
 
 namespace code.Model
 {
-    public interface IDataTempletModel
-    {
-        //根据实际数据模型建立数据模板树
-        void GenerateDataTempletTree(DataTempletItem root);
-    }
-
-    public class DataTempletModel : IDataTempletModel
+    public class DataTempletModel : IGenerateDataTempletTreeAble
     {
         public XmlDocument Document { get; set; }
 
