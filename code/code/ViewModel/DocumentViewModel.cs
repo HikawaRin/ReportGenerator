@@ -8,19 +8,10 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace code.ViewModel
 {
-    abstract class BData<T>
-    {
-        public string Path { get; set; }
-
-        public string Type { get; set; }
-
-        public List<T> Data { get; set; }
-    }
-
     public interface IGetDataAble
     {
-        //接受数据路径返回一个BData数据对象
-        List<string> GetData(string path);
+        //接受数据路径返回数据
+        List<string> GetData(string  path);
     }
 
     public class DocumentViewModel

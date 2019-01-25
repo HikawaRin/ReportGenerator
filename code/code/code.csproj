@@ -100,6 +100,9 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -172,11 +175,13 @@
     <Compile Include="Model\DataModel.cs" />
     <Compile Include="Model\DataTempletModel.cs" />
     <Compile Include="Model\DocumentModel.cs" />
+    <Compile Include="Model\RecordModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\DataTempletViewModel.cs" />
     <Compile Include="ViewModel\DocumentViewModel.cs" />
+    <Compile Include="ViewModel\RecordViewModel.cs" />
     <Compile Include="View\WindowsForm\DataSidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +207,7 @@
       <DependentUpon>DataSidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="code_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -229,6 +235,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\DataDemo.xml" />
     <Content Include="Data\DataTempletDemo.xml" />
   </ItemGroup>
   <PropertyGroup>
