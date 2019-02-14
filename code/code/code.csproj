@@ -175,7 +175,6 @@
     <Compile Include="Model\DataModel.cs" />
     <Compile Include="Model\DataTempletModel.cs" />
     <Compile Include="Model\DocumentModel.cs" />
-    <Compile Include="Model\RecordModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
