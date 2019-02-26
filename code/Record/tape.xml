@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <Tape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ApiVersion>1</ApiVersion>
+  <ApiVersion>1.0</ApiVersion>
   <MethodCalls>
+    <MethodCall>
+      <MethodName>测试函数</MethodName>
+      <Params>
+        <Param>
+          <ParamName>测试参数</ParamName>
+          <ValueType>int</ValueType>
+          <Value>44</Value>
+        </Param>
+      </Params>
+    </MethodCall>
+    <MethodCall>
+      <MethodName>测试函数</MethodName>
+      <Params>
+        <Param>
+          <ParamName>测试参数</ParamName>
+          <ValueType>int</ValueType>
+          <Value>44</Value>
+        </Param>
+      </Params>
+    </MethodCall>
     <MethodCall>
       <MethodName>测试函数</MethodName>
       <Params>

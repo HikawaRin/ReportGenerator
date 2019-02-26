@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GeneratorBase;
 
 namespace Record
 {
@@ -10,7 +11,7 @@ namespace Record
     {
         static void Main(string[] args)
         {
-            Recorder recorder = new Recorder(@"../../tape.xml", 1);
+            Recorder recorder = new Recorder(@"../../tape.xml", "1.0");
 
             recorder.AddMethodCall(new MethodCall {
                 MethodName = "测试函数", 

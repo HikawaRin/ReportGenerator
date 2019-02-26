@@ -5,3 +5,6 @@ E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.csprojAssemblyReferenc
 E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.csproj.CoreCompileInputs.cache
 E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.exe
 E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.pdb
+E:\user\code\ReportGenerator\code\Record\bin\Debug\GeneratorBase.dll
+E:\user\code\ReportGenerator\code\Record\bin\Debug\GeneratorBase.pdb
+E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.csproj.CopyComplete

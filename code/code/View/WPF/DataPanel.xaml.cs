@@ -25,11 +25,14 @@ namespace code.View.WPF
 
         public DocumentViewModel DocumentViewModel { get; set; }
 
+        public RecordViewModel RecordViewModel { get; set; }
+
         public DataPanel()
         {
             InitializeComponent();
             DataTempletViewModel = new DataTempletViewModel();
             DocumentViewModel = new DocumentViewModel();
+            RecordViewModel = new RecordViewModel(DocumentViewModel.DocumentModel.APIVersion);
 
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
         }
@@ -49,6 +52,7 @@ namespace code.View.WPF
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
             DocumentViewModel.InsertBookMark(item.Name);
             DocumentViewModel.InsertListData(item.Name, item.Path);
+            
         }
     }
 }
