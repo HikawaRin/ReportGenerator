@@ -14,7 +14,7 @@ namespace code.Data
         public MockData()
         {
             _document = new XmlDocument();
-            _document.Load(@"C:\code\ReportGenerator\code\code\Data\DataDemo.xml");            
+            _document.Load(@"..\..\Data\DataDemo.xml");            
         }
 
         public List<string> GET(string path)

@@ -1,0 +1,7 @@
+E:\user\code\ReportGenerator\code\Record\bin\Debug\Record.exe.config
+E:\user\code\ReportGenerator\code\Record\bin\Debug\Record.exe
+E:\user\code\ReportGenerator\code\Record\bin\Debug\Record.pdb
+E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.csprojAssemblyReference.cache
+E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.csproj.CoreCompileInputs.cache
+E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.exe
+E:\user\code\ReportGenerator\code\Record\obj\Debug\Record.pdb

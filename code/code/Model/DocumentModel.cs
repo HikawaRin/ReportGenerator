@@ -7,7 +7,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace code.Model
 {
-    public class DocumentModel
+    public class DocumentModel : GeneratorBase.APIBase
     {
         public Word.Application _application { get; private set; }
 
@@ -21,7 +21,7 @@ namespace code.Model
             range.Bookmarks.Add(name);
         }
 
-        public void DynamicInsert(string BookMarkName, List<string> Data)
+        public override void DynamicInsert(string BookMarkName, List<string> Data)
         {
             if (Data.Count == 0)
             {
