@@ -16,10 +16,16 @@ namespace Record
             recorder.AddMethodCall(new MethodCall {
                 MethodName = "测试函数", 
                 Params = { new Param {
-                    ParamName = "测试参数",
-                    ValueType = "int", 
-                    Value = "44"
-                } }
+                                ParamName = "测试参数",
+                                ValueType = "int", 
+                                Value = "44"
+                           },
+                           new Param {
+                                ParamName = "测试参数2",
+                                ValueType = "string",
+                                Value = "字符串"
+                           }
+                }
             });
 
             recorder.Save();

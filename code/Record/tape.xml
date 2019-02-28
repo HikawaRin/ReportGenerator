@@ -42,5 +42,20 @@
         </Param>
       </Params>
     </MethodCall>
+    <MethodCall>
+      <MethodName>测试函数</MethodName>
+      <Params>
+        <Param>
+          <ParamName>测试参数</ParamName>
+          <ValueType>int</ValueType>
+          <Value>44</Value>
+        </Param>
+        <Param>
+          <ParamName>测试参数2</ParamName>
+          <ValueType>string</ValueType>
+          <Value>字符串</Value>
+        </Param>
+      </Params>
+    </MethodCall>
   </MethodCalls>
 </Tape>

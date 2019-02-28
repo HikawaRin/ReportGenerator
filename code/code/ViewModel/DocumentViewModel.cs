@@ -39,9 +39,8 @@ namespace code.ViewModel
             }
         }
 
-        public void InsertListData(string BookMarkName, string DataPath)
+        public void CallMethod(string MethodName, string BookMarkName, string DataPath)
         {
-            string MethodName = "DynamicInsert";
             // DocumentModel.DynamicInsert(BookMarkName, DataModel.GetData(DataPath));
             DocumentModel.MethodDictionary[MethodName](BookMarkName, DataModel.GetData(DataPath));
         }

@@ -15,5 +15,18 @@ namespace code.ViewModel
         {
             Recorder = new Recorder(path, apiVersion);
         }
+
+        ~RecordViewModel()
+        {
+            Recorder.Save();
+        }
+
+        public void AddRecord(string MethodName, List<Param> Params)
+        {
+            Recorder.AddMethodCall(new MethodCall {
+                                        MethodName = MethodName,
+                                        Params = Params}
+            );
+        }
     }
 }

@@ -49,10 +49,27 @@ namespace code.View.WPF
 
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
+            string MethodName = "DynamicInsert";
+
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
             DocumentViewModel.InsertBookMark(item.Name);
-            DocumentViewModel.InsertListData(item.Name, item.Path);
-            
+            DocumentViewModel.CallMethod(MethodName, item.Name, item.Path);
+            List<Record.Param> Params = new List<Record.Param>
+            {
+                new Record.Param
+                {
+                    ParamName = "location",
+                    ValueType = "string",
+                    Value = item.Name
+                },
+                new Record.Param
+                {
+                    ParamName = "DataPath",
+                    ValueType = "string",
+                    Value = item.Path
+                }
+            };
+            RecordViewModel.AddRecord(MethodName, Params);
         }
     }
 }
