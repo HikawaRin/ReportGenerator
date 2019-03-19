@@ -71,5 +71,10 @@ namespace code.View.WPF
             };
             RecordViewModel.AddRecord(MethodName, Params);
         }
+
+        private void SaveTemplateButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecordViewModel.Recorder.Save();
+        }
     }
 }

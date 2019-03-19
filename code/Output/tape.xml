@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Tape xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ApiVersion>1.0</ApiVersion>
+  <MethodCalls>
+    <MethodCall>
+      <MethodName>DynamicInsert</MethodName>
+      <Params>
+        <Param>
+          <ParamName>location</ParamName>
+          <ValueType>string</ValueType>
+          <Value>数组1</Value>
+        </Param>
+        <Param>
+          <ParamName>DataPath</ParamName>
+          <ValueType>string</ValueType>
+          <Value>测试数据模板/二维数组/数组1</Value>
+        </Param>
+      </Params>
+    </MethodCall>
+    <MethodCall>
+      <MethodName>DynamicInsert</MethodName>
+      <Params>
+        <Param>
+          <ParamName>location</ParamName>
+          <ValueType>string</ValueType>
+          <Value>数组3</Value>
+        </Param>
+        <Param>
+          <ParamName>DataPath</ParamName>
+          <ValueType>string</ValueType>
+          <Value>测试数据模板/二维数组/数组3</Value>
+        </Param>
+      </Params>
+    </MethodCall>
+  </MethodCalls>
+</Tape>

@@ -11,14 +11,9 @@ namespace code.ViewModel
     {
         public Recorder Recorder { get; set; }
 
-        public RecordViewModel(string apiVersion, string path = @"../../tape.xml")
+        public RecordViewModel(string apiVersion, string path = @"../../../Output/tape.xml")
         {
             Recorder = new Recorder(path, apiVersion);
-        }
-
-        ~RecordViewModel()
-        {
-            Recorder.Save();
         }
 
         public void AddRecord(string MethodName, List<Param> Params)

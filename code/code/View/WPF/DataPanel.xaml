@@ -10,7 +10,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -32,7 +32,8 @@
             </TreeView>
         </ScrollViewer>
         <Grid Grid.Row="1">
-            <Button x:Name="InsertButton" Click="InsertButton_Click">Insert</Button>
+            <Button x:Name="InsertButton" Click="InsertButton_Click" Height="20" VerticalAlignment="Top">Insert</Button>
+            <Button x:Name="SaveTemplateButton" Click="SaveTemplateButton_Click" Height="20" VerticalAlignment="Bottom">SaveTemplate</Button>
         </Grid>
     </Grid>
 </UserControl>
