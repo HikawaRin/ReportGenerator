@@ -12,3 +12,5 @@ E:\user\code\ReportGenerator\code\Record\bin\Debug\DataWritter.dll
 E:\user\code\ReportGenerator\code\Record\bin\Debug\System.IO.FileSystem.Primitives.dll
 E:\user\code\ReportGenerator\code\Record\bin\Debug\System.IO.Packaging.dll
 E:\user\code\ReportGenerator\code\Record\bin\Debug\DataWritter.pdb
+E:\user\code\ReportGenerator\code\Record\bin\Debug\DocumentFormat.OpenXml.dll
+E:\user\code\ReportGenerator\code\Record\bin\Debug\DocumentFormat.OpenXml.xml
