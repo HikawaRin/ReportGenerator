@@ -7,13 +7,23 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace code.Model
 {
+    public interface IGetDataAble
+    {
+        //接受数据路径返回数据
+        List<string> GetData(string path);
+    }
+
     public class DocumentModel : GeneratorBase.APIBase
     {
         public Word.Application _application { get; private set; }
 
+        public IGetDataAble DataModel { get; set; }
+
         public DocumentModel()
         {
             _application = Globals.ThisAddIn.Application;
+
+            DataModel = new DataModel();
         }
 
         public void AddBookMark(Word.Range range, string name)
@@ -21,8 +31,10 @@ namespace code.Model
             range.Bookmarks.Add(name);
         }
 
-        public override void DynamicInsert(string BookMarkName, List<string> Data)
+        public override void DynamicInsert(GeneratorBase.MethodParams mp)
         {
+            List<string> Data = DataModel.GetData(mp.DataPath);
+
             if (Data.Count == 0)
             {
                 return;
@@ -31,7 +43,7 @@ namespace code.Model
             Word.Bookmark bookmark = null;
             foreach (Word.Bookmark bm in _application.ActiveDocument.Bookmarks)
             {
-                if (bm.Name == BookMarkName)
+                if (bm.Name == mp.BookMarkName)
                 {
                     bookmark = bm;
                     break;

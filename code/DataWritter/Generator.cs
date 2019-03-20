@@ -8,7 +8,7 @@ namespace DataWritter
 {
     public class Generator : GeneratorBase.APIBase
     {
-        public override void DynamicInsert(string loacation, List<string> Data)
+        public override void DynamicInsert(GeneratorBase.MethodParams mp)
         {
             throw new NotImplementedException();
         }

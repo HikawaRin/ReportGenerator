@@ -5,28 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using GeneratorBase;
 
 namespace Record
 {
-    public class Param
-    {
-        public string ParamName { get; set; }
-
-        public string ValueType { get; set; }
-
-        public string Value { get; set; }
-    }
-
     public class MethodCall
     {
         public string MethodName { get; set; }
 
-        public List<Param> Params { get; set; }
+        public MethodParams Params { get; set; }
 
         public MethodCall()
         {
             MethodName = "";
-            Params = new List<Param>();
+            Params = null;
+        }
+
+        public MethodCall(string methodName, MethodParams mp)
+        {
+            MethodName = methodName;
+            Params = mp;
         }
     }
 
@@ -51,8 +49,11 @@ namespace Record
         public Recorder(string path, string apiVersion)
         {
             Path = path;
-            _deserialize(Path);
-            Tape.ApiVersion = apiVersion;
+            // _deserialize(Path);
+            Tape = new Tape
+            {
+                ApiVersion = apiVersion
+            };
         }
 
         public void AddMethodCall(MethodCall methodCall)

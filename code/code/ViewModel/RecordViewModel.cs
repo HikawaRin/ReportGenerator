@@ -16,12 +16,9 @@ namespace code.ViewModel
             Recorder = new Recorder(path, apiVersion);
         }
 
-        public void AddRecord(string MethodName, List<Param> Params)
+        public void AddRecord(string MethodName, GeneratorBase.MethodParams mp)
         {
-            Recorder.AddMethodCall(new MethodCall {
-                                        MethodName = MethodName,
-                                        Params = Params}
-            );
+            Recorder.AddMethodCall(new MethodCall(MethodName, mp));
         }
     }
 }

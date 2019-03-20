@@ -52,24 +52,14 @@ namespace code.View.WPF
             string MethodName = "DynamicInsert";
 
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
-            DocumentViewModel.InsertBookMark(item.Name);
-            DocumentViewModel.CallMethod(MethodName, item.Name, item.Path);
-            List<Record.Param> Params = new List<Record.Param>
-            {
-                new Record.Param
-                {
-                    ParamName = "location",
-                    ValueType = "string",
-                    Value = item.Name
-                },
-                new Record.Param
-                {
-                    ParamName = "DataPath",
-                    ValueType = "string",
-                    Value = item.Path
-                }
-            };
-            RecordViewModel.AddRecord(MethodName, Params);
+            int? cellrow = null, cellcolumn = null;
+            DocumentViewModel.InsertBookMark(item.Name, ref cellrow, ref cellcolumn);
+
+            GeneratorBase.MethodParams mp
+                = new GeneratorBase.MethodParams(item.Name, item.Path, ((cellrow == null && cellcolumn == null) ? false : true), cellrow - 1, cellcolumn - 1);
+            DocumentViewModel.CallMethod(MethodName, mp);
+
+            RecordViewModel.AddRecord(MethodName, mp);
         }
 
         private void SaveTemplateButton_Click(object sender, RoutedEventArgs e)

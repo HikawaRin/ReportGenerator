@@ -8,30 +8,27 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace code.ViewModel
 {
-    public interface IGetDataAble
-    {
-        //接受数据路径返回数据
-        List<string> GetData(string  path);
-    }
-
     public class DocumentViewModel
     {
         public DocumentModel DocumentModel { get; set; }
 
-        public IGetDataAble DataModel { get; set; }
+        // public IGetDataAble DataModel { get; set; }
 
         public DocumentViewModel()
         {
             DocumentModel = new DocumentModel();
-            DataModel = new DataModel();
+            // DataModel = new DataModel();
         }
 
-        public void InsertBookMark(string name)
+        public void InsertBookMark(string name, ref int? row, ref int? column)
         {
             try
             {
                 Word.Cell c = Globals.ThisAddIn.Application.Selection.Cells[1];
                 DocumentModel.AddBookMark(c.Range, name);
+
+                row = c.RowIndex;
+                column = c.ColumnIndex;
             }
             catch(Exception)
             {
@@ -39,10 +36,10 @@ namespace code.ViewModel
             }
         }
 
-        public void CallMethod(string MethodName, string BookMarkName, string DataPath)
+        public void CallMethod(string MethodName, GeneratorBase.MethodParams mp)
         {
             // DocumentModel.DynamicInsert(BookMarkName, DataModel.GetData(DataPath));
-            DocumentModel.MethodDictionary[MethodName](BookMarkName, DataModel.GetData(DataPath));
+            DocumentModel.MethodDictionary[MethodName](mp);
         }
     }
 }

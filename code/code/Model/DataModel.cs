@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using code.ViewModel;
 using code.Data;
 
 namespace code.Model

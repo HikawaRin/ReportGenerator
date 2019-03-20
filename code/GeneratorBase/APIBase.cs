@@ -6,7 +6,38 @@ using System.Threading.Tasks;
 
 namespace GeneratorBase
 {
-    public delegate void MethodCallback(string loacation, List<string> Data);
+    public class MethodParams
+    {
+        public string BookMarkName { get; set; }
+
+        public bool IsInTableCell { get; set; }
+
+        public int? TableCellRow { get; set; }
+
+        public int? TableCellColumn { get; set; }
+
+        public string DataPath { get; set; }
+
+        public MethodParams()
+        {
+            BookMarkName = "";
+            IsInTableCell = false;
+            TableCellRow = null;
+            TableCellColumn = null;
+            DataPath = "";
+        }
+
+        public MethodParams(string bookMarkName, string dataPath, bool isInTableCell, int? tableCellRow, int? tableCellColumn)
+        {
+            BookMarkName = bookMarkName;
+            IsInTableCell = isInTableCell;
+            TableCellRow = tableCellRow;
+            TableCellColumn = tableCellColumn;
+            DataPath = dataPath;
+        }
+    }
+
+    public delegate void MethodCallback(MethodParams mp);
 
     public abstract class APIBase
     {
@@ -14,7 +45,7 @@ namespace GeneratorBase
 
         public readonly string APIVersion = "1.0"; 
 
-        public abstract void DynamicInsert(string loacation, List<string> Data);
+        public abstract void DynamicInsert(MethodParams mp);
 
         public APIBase()
         {
