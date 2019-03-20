@@ -11,7 +11,7 @@ namespace code.ViewModel
     {
         public Recorder Recorder { get; set; }
 
-        public RecordViewModel(string apiVersion, string path = @"../../../Output/tape.xml")
+        public RecordViewModel(string apiVersion, string path = @"..\\..\\..\\Input\\tape.xml")
         {
             Recorder = new Recorder(path, apiVersion);
         }

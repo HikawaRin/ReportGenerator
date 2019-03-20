@@ -19,6 +19,21 @@ namespace DataWritter
             Path = path;
         }
 
+        public void ShowTableIndex()
+        {
+            using (WordprocessingDocument document = WordprocessingDocument.Open(Path, true))
+            {
+                var mainPart = document.MainDocumentPart;
+                var table = mainPart.Document.Body.Descendants<Table>().First();
+
+                Console.WriteLine("rows:{0}", table.Descendants<TableRow>().Count());
+                foreach (var row in table.Descendants<TableRow>())
+                {
+                    Console.WriteLine("column:{0}", row.Descendants<TableCell>().Count());
+                }
+            }
+        }
+
         public void ShowBookMarks()
         {
             string pattern = @"_.*";
@@ -27,24 +42,6 @@ namespace DataWritter
                 var mainPart = document.MainDocumentPart;
                 var bookmarks = mainPart.Document.Body.Descendants<BookmarkStart>();
 
-                /* 
-                for (int i = 0; i < bookmarks.Count(); i++)
-                {
-                    var bks = bookmarks.ElementAt(i);
-                    var next = bks.NextSibling();
-                    if (next is BookmarkEnd)
-                    {
-                        var bme = (BookmarkEnd)next;
-                        if (int.Parse(bks.Id) - int.Parse(bme.Id) == 1)
-                        {
-                            var copy = (BookmarkEnd)next.Clone();
-                            bks.Parent.RemoveChild<BookmarkEnd>(bme);
-                            bks.Parent.InsertBefore<BookmarkEnd>(copy, bks);
-                        }
-                    }
-                }
-                */
-
                 foreach (var b in bookmarks)
                 {
                     // 过滤掉underscore bookmarks
@@ -52,14 +49,27 @@ namespace DataWritter
                     {
                         continue ;
                     }
-                    Console.WriteLine(b.Name);
+                    // Console.WriteLine(b.Name);
 
                     var table = b.Parent.Parent.Parent.Parent;
                     
                     if (table is Table)
                     {
-                        var cell = table.Elements<TableRow>().ElementAt(0).Elements<TableCell>().ElementAt(3);
+                        var cell = table.Elements<TableRow>().ElementAt(2).Elements<TableCell>().ElementAt(2);
                         Console.WriteLine(cell.InnerText);
+                        // Find the first paragraph in the table cell.
+                        Paragraph p = cell.Elements<Paragraph>().First();
+
+                        Run run = p.AppendChild(new Run());
+                        run.AppendChild(new Text(b.Name));
+                        /*
+                        // Find the first run in the paragraph.
+                        Run r = p.Elements<Run>().First();
+
+                        // Set the text for the run.
+                        Text t = r.Elements<Text>().First();
+                        t.Text = b.Name;
+                        */
                     }
                 }
             }

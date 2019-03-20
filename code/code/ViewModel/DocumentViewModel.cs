@@ -41,5 +41,10 @@ namespace code.ViewModel
             // DocumentModel.DynamicInsert(BookMarkName, DataModel.GetData(DataPath));
             DocumentModel.MethodDictionary[MethodName](mp);
         }
+
+        public void SaveAs(string path)
+        {
+            Globals.ThisAddIn.Application.ActiveDocument.SaveAs2(path);
+        }
     }
 }

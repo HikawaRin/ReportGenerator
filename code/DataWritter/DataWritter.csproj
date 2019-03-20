@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generator.cs" />
+    <Compile Include="MockDateBase.cs" />
     <Compile Include="Openxmlwriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,3 +3,4 @@ E:\user\code\ReportGenerator\code\GeneratorBase\bin\Debug\GeneratorBase.pdb
 E:\user\code\ReportGenerator\code\GeneratorBase\obj\Debug\GeneratorBase.csproj.CoreCompileInputs.cache
 E:\user\code\ReportGenerator\code\GeneratorBase\obj\Debug\GeneratorBase.dll
 E:\user\code\ReportGenerator\code\GeneratorBase\obj\Debug\GeneratorBase.pdb
+E:\user\code\ReportGenerator\code\GeneratorBase\obj\Debug\GeneratorBase.csprojAssemblyReference.cache

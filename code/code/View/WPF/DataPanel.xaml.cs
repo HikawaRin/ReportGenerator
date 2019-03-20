@@ -57,7 +57,7 @@ namespace code.View.WPF
 
             GeneratorBase.MethodParams mp
                 = new GeneratorBase.MethodParams(item.Name, item.Path, ((cellrow == null && cellcolumn == null) ? false : true), cellrow - 1, cellcolumn - 1);
-            DocumentViewModel.CallMethod(MethodName, mp);
+            // DocumentViewModel.CallMethod(MethodName, mp);
 
             RecordViewModel.AddRecord(MethodName, mp);
         }
@@ -65,6 +65,7 @@ namespace code.View.WPF
         private void SaveTemplateButton_Click(object sender, RoutedEventArgs e)
         {
             RecordViewModel.Recorder.Save();
+            DocumentViewModel.SaveAs(@"E:\\user\\code\\ReportGenerator\\code\\Input\\Template.docx");
         }
     }
 }

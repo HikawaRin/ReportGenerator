@@ -42,7 +42,7 @@ namespace Record
 
     public class Recorder
     {
-        private Tape Tape { get; set; }
+        public Tape Tape { get; private set; }
 
         public string Path { get; set; }
 
@@ -54,6 +54,12 @@ namespace Record
             {
                 ApiVersion = apiVersion
             };
+        }
+
+        public Recorder(string path)
+        {
+            Path = path;
+            _deserialize(Path);
         }
 
         public void AddMethodCall(MethodCall methodCall)

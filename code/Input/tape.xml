@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Tape xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ApiVersion>1.0</ApiVersion>
+  <MethodCalls>
+    <MethodCall>
+      <MethodName>DynamicInsert</MethodName>
+      <Params>
+        <BookMarkName>数组2</BookMarkName>
+        <IsInTableCell>true</IsInTableCell>
+        <TableCellRow>2</TableCellRow>
+        <TableCellColumn>1</TableCellColumn>
+        <DataPath>测试数据模板/二维数组/数组2</DataPath>
+      </Params>
+    </MethodCall>
+  </MethodCalls>
+</Tape>
