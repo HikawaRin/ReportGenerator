@@ -1,0 +1,13 @@
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\DataWritter.dll
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\DataWritter.pdb
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\DocumentFormat.OpenXml.dll
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\GeneratorBase.dll
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\System.IO.FileSystem.Primitives.dll
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\System.IO.Packaging.dll
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\GeneratorBase.pdb
+E:\user\code\ReportGenerator\code\DataWritter\bin\Debug\DocumentFormat.OpenXml.xml
+E:\user\code\ReportGenerator\code\DataWritter\obj\Debug\DataWritter.csprojAssemblyReference.cache
+E:\user\code\ReportGenerator\code\DataWritter\obj\Debug\DataWritter.csproj.CoreCompileInputs.cache
+E:\user\code\ReportGenerator\code\DataWritter\obj\Debug\DataWritter.csproj.CopyComplete
+E:\user\code\ReportGenerator\code\DataWritter\obj\Debug\DataWritter.dll
+E:\user\code\ReportGenerator\code\DataWritter\obj\Debug\DataWritter.pdb

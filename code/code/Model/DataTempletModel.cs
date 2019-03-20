@@ -22,7 +22,7 @@ namespace code.Model
                 IgnoreComments = true,
                 IgnoreWhitespace = true
             };
-            using (XmlReader reader = XmlReader.Create(path,  Settings))
+            using (XmlReader reader = XmlReader.Create(path, Settings))
             {
                 Document.Load(reader);
             }// using (XmlReader reader = XmlReader.Create(path,  Settings))

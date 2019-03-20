@@ -10,18 +10,14 @@ namespace Record
     {
         static void Main(string[] args)
         {
-            Recorder recorder = new Recorder(@"../../tape.xml", 1);
-
-            recorder.AddMethodCall(new MethodCall {
-                MethodName = "测试函数", 
-                Params = { new Param {
-                    ParamName = "测试参数",
-                    ValueType = "int", 
-                    Value = "44"
-                } }
-            });
-
-            recorder.Save();
+            // DataWritter.Openxmlwriter Writer = new DataWritter.Openxmlwriter(@"../../template.docx");
+            // Writer.ShowBookMarks();
+            // Writer.ShowTableIndex();
+            DataWritter.Generator Generator 
+                = new DataWritter.Generator(@"..\\..\\..\\Input\\Template.docx", 
+                                            @"..\\..\\..\\Input\\tape.xml");
+            Generator.WriteData();
+            Console.ReadLine();
         }
     }
 }

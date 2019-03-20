@@ -25,11 +25,14 @@ namespace code.View.WPF
 
         public DocumentViewModel DocumentViewModel { get; set; }
 
+        public RecordViewModel RecordViewModel { get; set; }
+
         public DataPanel()
         {
             InitializeComponent();
             DataTempletViewModel = new DataTempletViewModel();
             DocumentViewModel = new DocumentViewModel();
+            RecordViewModel = new RecordViewModel(DocumentViewModel.DocumentModel.APIVersion);
 
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
         }
@@ -46,9 +49,23 @@ namespace code.View.WPF
 
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
+            string MethodName = "DynamicInsert";
+
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
-            DocumentViewModel.InsertBookMark(item.Name);
-            DocumentViewModel.InsertListData(item.Name, item.Path);
+            int? cellrow = null, cellcolumn = null;
+            DocumentViewModel.InsertBookMark(item.Name, ref cellrow, ref cellcolumn);
+
+            GeneratorBase.MethodParams mp
+                = new GeneratorBase.MethodParams(item.Name, item.Path, ((cellrow == null && cellcolumn == null) ? false : true), cellrow - 1, cellcolumn - 1);
+            // DocumentViewModel.CallMethod(MethodName, mp);
+
+            RecordViewModel.AddRecord(MethodName, mp);
+        }
+
+        private void SaveTemplateButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecordViewModel.Recorder.Save();
+            DocumentViewModel.SaveAs(@"E:\\user\\code\\ReportGenerator\\code\\Input\\Template.docx");
         }
     }
 }

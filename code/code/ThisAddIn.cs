@@ -17,7 +17,6 @@ namespace code
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             myPane = this.CustomTaskPanes.Add(new DataSidePanel(), "Data Panel");
-            myPane.Width = 300;
             myPane.Visible = true;
         }
 
