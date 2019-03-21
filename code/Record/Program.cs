@@ -17,6 +17,7 @@ namespace Record
                 = new DataWritter.Generator(@"..\\..\\..\\Input\\Template.docx", 
                                             @"..\\..\\..\\Input\\tape.xml");
             Generator.WriteData();
+
             Console.ReadLine();
         }
     }

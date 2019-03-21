@@ -67,5 +67,10 @@ namespace code.View.WPF
             RecordViewModel.Recorder.Save();
             DocumentViewModel.SaveAs(@"E:\\user\\code\\ReportGenerator\\code\\Input\\Template.docx");
         }
+
+        private void InsertBookmark_Click(object sender, RoutedEventArgs e)
+        {
+            DocumentViewModel.InsertBookMarks();            
+        }
     }
 }

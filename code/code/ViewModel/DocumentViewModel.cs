@@ -20,6 +20,17 @@ namespace code.ViewModel
             // DataModel = new DataModel();
         }
 
+        public void InsertBookMarks()
+        {
+            var cells = Globals.ThisAddIn.Application.Selection.Cells;
+            for (int i = 1; i < cells.Count; i++)
+            {
+                string name = "书签编号" + i.ToString();
+                DocumentModel.AddBookMark(cells[i].Range, name);
+                cells[i].Range.Text = cells[i].RowIndex.ToString() + "," + cells[i].ColumnIndex.ToString();
+            }
+        }
+
         public void InsertBookMark(string name, ref int? row, ref int? column)
         {
             try
