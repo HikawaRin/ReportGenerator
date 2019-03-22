@@ -33,7 +33,12 @@
             </TreeView>
         </ScrollViewer>
         <Grid Grid.Row="1">
-            <Button x:Name="InsertBookmark" Click="InsertBookmark_Click">Bookmarks</Button>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" x:Name="BookmarkHeader"></TextBox>
+            <Button Grid.Column="1" x:Name="InsertBookmark" Click="InsertBookmark_Click">Bookmarks</Button>
         </Grid>
         <Grid Grid.Row="2">
             <Button x:Name="InsertButton" Click="InsertButton_Click" Height="20" VerticalAlignment="Top">Insert</Button>

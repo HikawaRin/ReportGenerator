@@ -20,12 +20,12 @@ namespace code.ViewModel
             // DataModel = new DataModel();
         }
 
-        public void InsertBookMarks()
+        public void InsertBookMarks(string bookMarkHeader)
         {
             var cells = Globals.ThisAddIn.Application.Selection.Cells;
-            for (int i = 1; i < cells.Count; i++)
+            for (int i = 1; i <= cells.Count; i++)
             {
-                string name = "书签编号" + i.ToString();
+                string name = bookMarkHeader + "_" + i.ToString();
                 DocumentModel.AddBookMark(cells[i].Range, name);
                 cells[i].Range.Text = cells[i].RowIndex.ToString() + "," + cells[i].ColumnIndex.ToString();
             }

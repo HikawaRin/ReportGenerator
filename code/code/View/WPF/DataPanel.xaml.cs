@@ -32,9 +32,10 @@ namespace code.View.WPF
             InitializeComponent();
             DataTempletViewModel = new DataTempletViewModel();
             DocumentViewModel = new DocumentViewModel();
-            RecordViewModel = new RecordViewModel(DocumentViewModel.DocumentModel.APIVersion);
+            RecordViewModel = new RecordViewModel(DocumentViewModel.DocumentModel.APIVersion, @"E:\\user\\code\\ReportGenerator\\code\\Input\\tape.xml");
 
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
+            this.BookmarkHeader.Text = "书签组";
         }
 
         private void DataTempletScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
@@ -70,7 +71,7 @@ namespace code.View.WPF
 
         private void InsertBookmark_Click(object sender, RoutedEventArgs e)
         {
-            DocumentViewModel.InsertBookMarks();            
+            DocumentViewModel.InsertBookMarks(this.BookmarkHeader.Text);            
         }
     }
 }
