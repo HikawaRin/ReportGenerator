@@ -2,47 +2,75 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:local="clr-namespace:code.View.WPF"
              xmlns:ViewModel="clr-namespace:code.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="300"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="0"
-                      VerticalScrollBarVisibility="Hidden"
-                      PreviewMouseWheel="DataTempletScrollViewer_PreviewMouseWheel">
-            <TreeView x:Name="DataTempletTree">
-                <TreeView.ItemTemplate>
-                    <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
-                            <StackPanel.ToolTip>
-                                <TextBlock VerticalAlignment="Center" Text="{Binding Path}" 
-                                           TextWrapping="Wrap" MaxWidth="150"/>
-                            </StackPanel.ToolTip>
-                        </StackPanel>
-                    </HierarchicalDataTemplate>
-                </TreeView.ItemTemplate>
-            </TreeView>
-        </ScrollViewer>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock TextAlignment="Center" Background="LightSkyBlue">数据模板</TextBlock>
+            <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="1"
+                          VerticalScrollBarVisibility="Hidden"
+                          Background="Azure"
+                          PreviewMouseWheel="DataTempletScrollViewer_PreviewMouseWheel">
+                <TreeView x:Name="DataTempletTree" Background="AliceBlue">
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
+                                <StackPanel.ToolTip>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding Path}" 
+                                               TextWrapping="Wrap" MaxWidth="150"/>
+                                </StackPanel.ToolTip>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+            </ScrollViewer>
+        </Grid>
         <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="InsertButton" Grid.Row="0" Click="InsertButton_Click" Height="20" VerticalAlignment="Top">Insert</Button>
+            <Button x:Name="SaveTemplateButton" Grid.Row="1" Click="SaveTemplateButton_Click" Height="20" VerticalAlignment="Bottom">Save Template</Button>
+        </Grid>
+        <GridSplitter Grid.Row="2" Height="5" HorizontalAlignment="Stretch" Background="Azure"/>
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" x:Name="BookmarkHeader"></TextBox>
             <Button Grid.Column="1" x:Name="InsertBookmark" Click="InsertBookmark_Click">Bookmarks</Button>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Button x:Name="InsertButton" Click="InsertButton_Click" Height="20" VerticalAlignment="Top">Insert</Button>
-            <Button x:Name="SaveTemplateButton" Click="SaveTemplateButton_Click" Height="20" VerticalAlignment="Bottom">SaveTemplate</Button>
         </Grid>
     </Grid>
 </UserControl>

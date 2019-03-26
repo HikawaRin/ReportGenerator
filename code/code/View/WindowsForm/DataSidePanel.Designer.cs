@@ -36,7 +36,7 @@
             // 
             this.elementHost1.Location = new System.Drawing.Point(0, 0);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(300, 900);
+            this.elementHost1.Size = new System.Drawing.Size(400, 900);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.dataPanel1;
@@ -48,7 +48,7 @@
             this.AutoSize = true;
             this.Controls.Add(this.elementHost1);
             this.Name = "DataSidePanel";
-            this.Size = new System.Drawing.Size(303, 903);
+            this.Size = new System.Drawing.Size(403, 903);
             this.ResumeLayout(false);
 
         }
