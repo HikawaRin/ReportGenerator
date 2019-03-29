@@ -47,7 +47,7 @@ namespace code.ViewModel
             }
         }
 
-        public void CallMethod(string MethodName, GeneratorBase.MethodParams mp)
+        public void CallMethod(GeneratorBase.MethodName MethodName, GeneratorBase.MethodParams mp)
         {
             // DocumentModel.DynamicInsert(BookMarkName, DataModel.GetData(DataPath));
             DocumentModel.MethodDictionary[MethodName](mp);

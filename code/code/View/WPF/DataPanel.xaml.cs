@@ -36,6 +36,7 @@ namespace code.View.WPF
 
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
             this.BookmarkHeader.Text = "书签组";
+            this.DataHeader.Text = "数据组";
         }
 
         private void DataTempletScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
@@ -50,8 +51,6 @@ namespace code.View.WPF
 
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
-            string MethodName = "DynamicInsert";
-
             DataTempletItem item = DataTempletTree.SelectedItem as DataTempletItem;
             int? cellrow = null, cellcolumn = null;
             DocumentViewModel.InsertBookMark(item.Name, ref cellrow, ref cellcolumn);
@@ -60,7 +59,7 @@ namespace code.View.WPF
                 = new GeneratorBase.MethodParams(item.Name, item.Path, ((cellrow == null && cellcolumn == null) ? false : true), cellrow - 1, cellcolumn - 1);
             // DocumentViewModel.CallMethod(MethodName, mp);
 
-            RecordViewModel.AddRecord(MethodName, mp);
+            RecordViewModel.AddRecord(GeneratorBase.MethodName.DynamicInsert, mp);
         }
 
         private void SaveTemplateButton_Click(object sender, RoutedEventArgs e)
@@ -72,6 +71,11 @@ namespace code.View.WPF
         private void InsertBookmark_Click(object sender, RoutedEventArgs e)
         {
             DocumentViewModel.InsertBookMarks(this.BookmarkHeader.Text);            
+        }
+
+        private void StaticInsert_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

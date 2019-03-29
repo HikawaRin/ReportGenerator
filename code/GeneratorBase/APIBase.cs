@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace GeneratorBase
 {
+    public enum MethodName
+    {
+        DynamicInsert
+    };
+
     public class MethodParams
     {
         public string BookMarkName { get; set; }
@@ -27,7 +32,8 @@ namespace GeneratorBase
             DataPath = "";
         }
 
-        public MethodParams(string bookMarkName, string dataPath, bool isInTableCell, int? tableCellRow, int? tableCellColumn)
+        public MethodParams(string bookMarkName, string dataPath, 
+            bool isInTableCell, int? tableCellRow, int? tableCellColumn)
         {
             BookMarkName = bookMarkName;
             IsInTableCell = isInTableCell;
@@ -41,7 +47,7 @@ namespace GeneratorBase
 
     public abstract class APIBase
     {
-        public Dictionary<string, MethodCallback> MethodDictionary { get; set; }
+        public Dictionary<MethodName, MethodCallback> MethodDictionary { get; set; }
 
         public readonly string APIVersion = "1.0"; 
 
@@ -49,9 +55,9 @@ namespace GeneratorBase
 
         public APIBase()
         {
-            MethodDictionary = new Dictionary<string, MethodCallback>
+            MethodDictionary = new Dictionary<MethodName, MethodCallback>
             {
-                { "DynamicInsert", DynamicInsert }
+                { MethodName.DynamicInsert, DynamicInsert }
             };
         }
     }

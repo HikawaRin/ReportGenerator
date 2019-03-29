@@ -5,21 +5,21 @@
     <MethodCall>
       <MethodName>DynamicInsert</MethodName>
       <Params>
-        <BookMarkName>数组1</BookMarkName>
+        <BookMarkName>一维数组</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
-        <TableCellRow>2</TableCellRow>
-        <TableCellColumn>2</TableCellColumn>
-        <DataPath>测试数据模板/二维数组/数组1</DataPath>
+        <TableCellRow>0</TableCellRow>
+        <TableCellColumn>5</TableCellColumn>
+        <DataPath>测试数据模板/结构体型数据/结构体1/一维数组</DataPath>
       </Params>
     </MethodCall>
     <MethodCall>
       <MethodName>DynamicInsert</MethodName>
       <Params>
-        <BookMarkName>一维数组</BookMarkName>
+        <BookMarkName>数组1</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
-        <TableCellRow>2</TableCellRow>
-        <TableCellColumn>4</TableCellColumn>
-        <DataPath>测试数据模板/结构体型数据/结构体2/一维数组</DataPath>
+        <TableCellRow>0</TableCellRow>
+        <TableCellColumn>1</TableCellColumn>
+        <DataPath>测试数据模板/二维数组/数组1</DataPath>
       </Params>
     </MethodCall>
   </MethodCalls>

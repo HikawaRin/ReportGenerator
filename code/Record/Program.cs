@@ -18,6 +18,7 @@ namespace Record
                                             @"..\\..\\..\\Input\\tape.xml");
             Generator.WriteData();
 
+            Console.WriteLine("Done");
             Console.ReadLine();
         }
     }

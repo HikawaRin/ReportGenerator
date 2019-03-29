@@ -11,17 +11,16 @@ namespace Record
 {
     public class MethodCall
     {
-        public string MethodName { get; set; }
+        public MethodName MethodName { get; set; }
 
         public MethodParams Params { get; set; }
 
         public MethodCall()
         {
-            MethodName = "";
             Params = null;
         }
 
-        public MethodCall(string methodName, MethodParams mp)
+        public MethodCall(MethodName methodName, MethodParams mp)
         {
             MethodName = methodName;
             Params = mp;

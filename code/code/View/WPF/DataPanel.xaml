@@ -65,12 +65,18 @@
         </Grid>
         <GridSplitter Grid.Row="2" Height="5" HorizontalAlignment="Stretch" Background="Azure"/>
         <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" x:Name="BookmarkHeader"></TextBox>
-            <Button Grid.Column="1" x:Name="InsertBookmark" Click="InsertBookmark_Click">Bookmarks</Button>
+            <TextBox Grid.Row="0" Grid.Column="0" x:Name="BookmarkHeader"></TextBox>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="InsertBookmark" Click="InsertBookmark_Click">Bookmarks</Button>
+            <TextBox Grid.Row="1" Grid.Column="0" x:Name="DataHeader"></TextBox>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="StaticInsert" Click="StaticInsert_Click">Static Insert</Button>
         </Grid>
     </Grid>
 </UserControl>
