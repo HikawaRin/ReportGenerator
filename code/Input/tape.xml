@@ -7,19 +7,29 @@
       <Params>
         <BookMarkName>一维数组</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
-        <TableCellRow>0</TableCellRow>
-        <TableCellColumn>5</TableCellColumn>
+        <TableCellRow>2</TableCellRow>
+        <TableCellColumn>1</TableCellColumn>
         <DataPath>测试数据模板/结构体型数据/结构体1/一维数组</DataPath>
       </Params>
     </MethodCall>
     <MethodCall>
       <MethodName>DynamicInsert</MethodName>
       <Params>
-        <BookMarkName>数组1</BookMarkName>
+        <BookMarkName>字符串</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
-        <TableCellRow>0</TableCellRow>
-        <TableCellColumn>1</TableCellColumn>
-        <DataPath>测试数据模板/二维数组/数组1</DataPath>
+        <TableCellRow>2</TableCellRow>
+        <TableCellColumn>2</TableCellColumn>
+        <DataPath>测试数据模板/结构体型数据/结构体2/字符串</DataPath>
+      </Params>
+    </MethodCall>
+    <MethodCall>
+      <MethodName>DynamicInsert</MethodName>
+      <Params>
+        <BookMarkName>数组2</BookMarkName>
+        <IsInTableCell>true</IsInTableCell>
+        <TableCellRow>2</TableCellRow>
+        <TableCellColumn>3</TableCellColumn>
+        <DataPath>测试数据模板/二维数组/数组2</DataPath>
       </Params>
     </MethodCall>
   </MethodCalls>

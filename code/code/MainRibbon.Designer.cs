@@ -57,6 +57,7 @@
             // 
             this.DataSidePanelButton.Label = "DateSidePanel";
             this.DataSidePanelButton.Name = "DataSidePanelButton";
+            this.DataSidePanelButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.DataSidePanelButton_Click);
             // 
             // MainRibbon
             // 

@@ -12,5 +12,10 @@ namespace code
         {
 
         }
+
+        private void DataSidePanelButton_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.myPane.Visible = true;
+        }
     }
 }
