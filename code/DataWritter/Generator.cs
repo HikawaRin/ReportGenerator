@@ -21,9 +21,12 @@ namespace DataWritter
 
         public string Path { get; set; }
 
-        public Generator(string path, string RecordPath)
+        public Generator(string floderpath, string RecordPath)
         {
-            Path = path;
+            string Inputpath = floderpath + @"\Input\Template.docx";
+            Path = floderpath + @"\Output\Report.docx";
+            System.IO.File.Copy(Inputpath, Path, true);
+
             Speaker = new Record.Recorder(RecordPath);
             DataProvider = new MockDataBase();
 
