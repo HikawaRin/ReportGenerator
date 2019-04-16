@@ -53,9 +53,16 @@
                     </ScrollViewer>
                 </TabItem>
                 <TabItem Header="历史记录" Name="History" Controls:ControlsHelper.HeaderFontSize="14">
-                    <Grid Background="#FFE5E5E5">
-                        <TextBlock  Margin="3"  Text="选项卡2" VerticalAlignment="Top"/>
-                    </Grid>
+                    <ListView x:Name="HistoryList" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="插入方式" Width="auto" DisplayMemberBinding="{Binding Path=MethodName}"/>
+                                    <GridViewColumn Header="插入数据模板" Width="auto" DisplayMemberBinding="{Binding Path=Params.DataPath}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </TabItem>
             </TabControl>
         </Grid>

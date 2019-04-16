@@ -16,5 +16,5 @@ VSTO40;DEBUG;TRACE
 301344490687
 Resources\Icons.xaml;Resources\IconsNonShared.xaml;View\WPF\DataPanel.xaml;
 
-False
+True
 
