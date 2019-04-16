@@ -34,6 +34,7 @@ namespace code.View.WPF
             DocumentViewModel = new DocumentViewModel();
             RecordViewModel = new RecordViewModel(DocumentViewModel.DocumentModel.APIVersion, @"E:\\user\\code\\ReportGenerator\\code\\Input\\tape.xml");
 
+            this.HistoryList.ItemsSource = RecordViewModel.Recorder.Tape.MethodCalls;
             this.DataTempletTree.ItemsSource = DataTempletViewModel.Root;
             this.BookmarkHeader.Text = "书签组";
             this.DataHeader.Text = "数据组";

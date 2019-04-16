@@ -254,8 +254,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\DataDemo.xml" />
-    <Content Include="Data\DataTempletDemo.xml" />
+    <Content Include="Data\DataTemplateDemo.xml" />
     <Content Include="Resources\Entypo-license.txt" />
     <Content Include="Resources\WindowsIcons-license.txt" />
   </ItemGroup>

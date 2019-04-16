@@ -14,8 +14,8 @@ namespace Record
             // Writer.ShowBookMarks();
             // Writer.ShowTableIndex();
             DataWritter.Generator Generator 
-                = new DataWritter.Generator(@"..\\..\\..\\Input\\Template.docx", 
-                                            @"..\\..\\..\\Input\\tape.xml");
+                = new DataWritter.Generator(@"E: \user\code\ReportGenerator\code", 
+                                            @"..\..\..\Input\tape.xml");
             Generator.WriteData();
 
             Console.WriteLine("Done");
