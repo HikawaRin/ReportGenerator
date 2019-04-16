@@ -44,7 +44,7 @@ namespace code.ViewModel
             {
                 new DataTempletItem()
             };
-            DataTempletModel = new DataTempletModel(@"..\..\Data\DataTempletDemo.xml");
+            DataTempletModel = new DataTempletModel(@"..\..\Data\DataTemplateDemo.xml");
 
             DataTempletModel.GenerateDataTempletTree(Root[0]);
         }

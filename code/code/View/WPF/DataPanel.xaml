@@ -31,29 +31,33 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <TextBlock TextAlignment="Center" Background="LightSkyBlue">数据模板</TextBlock>
-            <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="1"
+            <TabControl Margin="5" TabStripPlacement="Top">
+                <TabItem Header="数据模板" Name="DataStruct" Controls:ControlsHelper.HeaderFontSize="14">
+                    <ScrollViewer x:Name="DataTempletScrollViewer" Grid.Row="1"
                           VerticalScrollBarVisibility="Hidden"
                           Background="Azure"
                           PreviewMouseWheel="DataTempletScrollViewer_PreviewMouseWheel">
-                <TreeView x:Name="DataTempletTree" Background="AliceBlue">
-                    <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
-                                <StackPanel.ToolTip>
-                                    <TextBlock VerticalAlignment="Center" Text="{Binding Path}" 
+                        <TreeView x:Name="DataTempletTree" Background="#EEEEEE">
+                            <TreeView.ItemTemplate>
+                                <HierarchicalDataTemplate DataType="{x:Type ViewModel:DataTempletItem}" ItemsSource="{Binding Path=Children}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
+                                        <StackPanel.ToolTip>
+                                            <TextBlock VerticalAlignment="Center" Text="{Binding Path}" 
                                                TextWrapping="Wrap" MaxWidth="150"/>
-                                </StackPanel.ToolTip>
-                            </StackPanel>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
-            </ScrollViewer>
+                                        </StackPanel.ToolTip>
+                                    </StackPanel>
+                                </HierarchicalDataTemplate>
+                            </TreeView.ItemTemplate>
+                        </TreeView>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="历史记录" Name="History" Controls:ControlsHelper.HeaderFontSize="14">
+                    <Grid Background="#FFE5E5E5">
+                        <TextBlock  Margin="3"  Text="选项卡2" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

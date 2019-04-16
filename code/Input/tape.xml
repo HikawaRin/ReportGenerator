@@ -5,31 +5,21 @@
     <MethodCall>
       <MethodName>DynamicInsert</MethodName>
       <Params>
-        <BookMarkName>一维数组</BookMarkName>
+        <BookMarkName>array</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
         <TableCellRow>2</TableCellRow>
         <TableCellColumn>1</TableCellColumn>
-        <DataPath>测试数据模板/结构体型数据/结构体1/一维数组</DataPath>
+        <DataPath>饱和特性测量/过程数据/测量数据/输入功率/array</DataPath>
       </Params>
     </MethodCall>
     <MethodCall>
       <MethodName>DynamicInsert</MethodName>
       <Params>
-        <BookMarkName>字符串</BookMarkName>
-        <IsInTableCell>true</IsInTableCell>
-        <TableCellRow>2</TableCellRow>
-        <TableCellColumn>2</TableCellColumn>
-        <DataPath>测试数据模板/结构体型数据/结构体2/字符串</DataPath>
-      </Params>
-    </MethodCall>
-    <MethodCall>
-      <MethodName>DynamicInsert</MethodName>
-      <Params>
-        <BookMarkName>数组2</BookMarkName>
+        <BookMarkName>小信号输出功率</BookMarkName>
         <IsInTableCell>true</IsInTableCell>
         <TableCellRow>2</TableCellRow>
         <TableCellColumn>3</TableCellColumn>
-        <DataPath>测试数据模板/二维数组/数组2</DataPath>
+        <DataPath>饱和特性测量/结果数据/小信号输出功率</DataPath>
       </Params>
     </MethodCall>
   </MethodCalls>
